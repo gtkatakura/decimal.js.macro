@@ -1,3 +1,8 @@
+# decimal.js.macro
+[![Build Status](https://img.shields.io/circleci/project/github/gtkatakura/decimal.js.macro/master.svg?label=build)](https://circleci.com/gh/gtkatakura/decimal.js.macro)
+[![npm version](https://badge.fury.io/js/decimal.js.macro.svg)](https://badge.fury.io/js/decimal.js.macro)
+[![MIT License](https://img.shields.io/npm/l/decimal.js.macro.svg)](https://github.com/gtkatakura/decimal.js.macro/blob/master/LICENSE.md)
+
 ## Usage
 
 ```js
