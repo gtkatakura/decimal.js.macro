@@ -2,6 +2,7 @@
 [![Build Status](https://img.shields.io/circleci/project/github/gtkatakura/decimal.js.macro/master.svg?label=build)](https://circleci.com/gh/gtkatakura/decimal.js.macro)
 [![npm version](https://badge.fury.io/js/decimal.js.macro.svg)](https://badge.fury.io/js/decimal.js.macro)
 [![MIT License](https://img.shields.io/npm/l/decimal.js.macro.svg)](https://github.com/gtkatakura/decimal.js.macro/blob/master/LICENSE.md)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 ## Usage
 
