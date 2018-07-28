@@ -38,5 +38,12 @@ pluginTester({
       const a = money((1 + 2) * (3 - 4))
       const b = money(((1 + 2)))
     `,
+    `
+      import money from '../src/macro'
+      import Decimal from 'Decimal'
+      import _Decimal from '_Decimal'
+
+      const a = money(1)
+    `,
   ],
 })

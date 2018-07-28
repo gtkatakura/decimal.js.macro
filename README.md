@@ -4,14 +4,17 @@
 import money from 'decimal.js.macro'
 
 const a = money(1)
-const b = money(a - 3 * 4 / 5)
-const c = money(a - 3 + 4 - 5)
-const d = money(1 ** 2 ** 3)
+const b = money(a)
+const c = money(-1)
+const d = money(-c)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-const a = money(1);
-const b = money(a).sub(money(money('3').mul('4')).div('5'));
-const c = money(money(money(a).sub('3')).add('4')).sub('5');
-const d = money('1').pow(money('2').pow('3'));
+import { _Decimal } from 'decimal.js';
+
+
+const a = _Decimal(1);
+const b = _Decimal(a);
+const c = _Decimal(-1);
+const d = _Decimal(-c);
 ```
