@@ -1,0 +1,16 @@
+{
+  "name": "gs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-macros": "^2.3.0",
+    "babel-preset-env": "^1.7.0",
+    "decimal.js": "^10.0.1"
+  },
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "npm run build && node dist/index.js"
+  }
+}
