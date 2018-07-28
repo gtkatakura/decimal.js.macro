@@ -10,7 +10,7 @@ const d = money(1 ** 2 ** 3)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-import { _Decimal } from 'decimal.js';
+import { Decimal as _Decimal } from 'decimal.js';
 
 
 const a = _Decimal('1');

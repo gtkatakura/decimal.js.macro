@@ -23,7 +23,7 @@ function importLibrary({ references, state, babel }, libraryIdentifier) {
   const program = state.file.path
 
   program.node.body.unshift(t.importDeclaration(
-    [t.importSpecifier(libraryIdentifier, libraryIdentifier)],
+    [t.importSpecifier(libraryIdentifier, t.identifier('Decimal'))],
     t.stringLiteral('decimal.js'),
   ))
 }
