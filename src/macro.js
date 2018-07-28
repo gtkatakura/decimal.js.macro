@@ -28,6 +28,18 @@ function importLibrary({ references, state, babel }, libraryIdentifier) {
   ))
 }
 
+const replaceAllNumericLiteral = ({ types: t }, path) => {
+  const visitor = {
+    NumericLiteral(path) {
+      const literal = t.stringLiteral(path.node.value.toString())
+
+      path.replaceWith(literal)
+    }
+  }
+
+  path.traverse(visitor)
+}
+
 const createVisitor = (babel, libraryIdentifier) => {
   const { types: t } = babel
 
@@ -38,11 +50,6 @@ const createVisitor = (babel, libraryIdentifier) => {
         path.node,
         libraryIdentifier,
       ))
-    },
-    NumericLiteral(path) {
-      const literal = t.stringLiteral(path.node.value.toString())
-
-      path.replaceWith(literal)
     }
   }
 }
@@ -60,6 +67,8 @@ function asFunction([argumentPath], state, babel, libraryIdentifier) {
     argumentPath.parentPath.traverse(visitor)
     argumentPath.parentPath.replaceWith(argumentPath)
   }
+
+  replaceAllNumericLiteral(babel, argumentPath.parentPath)
 }
 
 function replaceBinaryExpression({ types: t, template }, binaryExpression, libraryIdentifier) {
