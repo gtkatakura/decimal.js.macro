@@ -1,6 +1,6 @@
 {
   "name": "decimal.js.macro",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "author": {
     "name": "Gabriel Takashi Katakura"
@@ -31,12 +31,14 @@
   "devDependencies": {
     "babel-plugin-tester": "^5.4.0",
     "jest": "^23.4.2",
-    "kcd-scripts": "^0.39.2"
+    "kcd-scripts": "^0.39.2",
+    "semantic-release": "^15.8.1"
   },
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
     "build": "kcd-scripts build",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "jest": {
     "testEnvironment": "node"
