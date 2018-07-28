@@ -16,8 +16,8 @@ import { _Decimal } from 'decimal.js';
 
 const a = _Decimal('1');
 const b = _Decimal(a);
-const c = _Decimal(-'1');
-const d = _Decimal(-c);
+const c = _Decimal(_Decimal('1').neg());
+const d = _Decimal(_Decimal(c).neg());
 "
 `;
 

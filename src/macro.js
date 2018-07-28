@@ -28,16 +28,25 @@ function importLibrary({ references, state, babel }, libraryIdentifier) {
   ))
 }
 
-const replaceAllNumericLiteral = ({ types: t }, path) => {
+const replaceAllNumericLiteral = (babel, sourcePath, libraryIdentifier) => {
+  const { types: t } = babel
+
   const visitor = {
     NumericLiteral(path) {
       const literal = t.stringLiteral(path.node.value.toString())
 
       path.replaceWith(literal)
+    },
+    UnaryExpression(path) {
+      path.replaceWith(replaceUnaryExpression(
+        babel,
+        path.node,
+        libraryIdentifier,
+      ))
     }
   }
 
-  path.traverse(visitor)
+  sourcePath.traverse(visitor)
 }
 
 const createVisitor = (babel, libraryIdentifier) => {
@@ -68,7 +77,7 @@ function asFunction([argumentPath], state, babel, libraryIdentifier) {
     argumentPath.parentPath.replaceWith(argumentPath)
   }
 
-  replaceAllNumericLiteral(babel, argumentPath.parentPath)
+  replaceAllNumericLiteral(babel, argumentPath.parentPath, libraryIdentifier)
 }
 
 function replaceBinaryExpression({ types: t, template }, binaryExpression, libraryIdentifier) {
@@ -95,6 +104,18 @@ function replaceSimpleExpression({ types: t, template }, expression, libraryIden
   })
 }
 
+function replaceUnaryExpression({ types: t, template }, expression, libraryIdentifier) {
+  const replace = template(`
+    LIBRARY(EXPRESSION).METHOD()
+  `)
+
+  return replace({
+    LIBRARY: libraryIdentifier,
+    EXPRESSION: expression.argument,
+    METHOD: t.identifier(methods[`${expression.operator}@`]),
+  })
+}
+
 const methods = {
   '+': 'add',
   '-': 'sub',
@@ -102,6 +123,7 @@ const methods = {
   '/': 'div',
   '**': 'pow',
   '%': 'mod',
+  '-@': 'neg',
 }
 
 module.exports = createMacro(macro)
