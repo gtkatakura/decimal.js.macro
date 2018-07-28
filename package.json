@@ -14,5 +14,18 @@
     "decimal",
     "decimal.js"
   ],
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "babel-plugin-macros": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-plugin-tester": "^5.4.0",
+    "jest": "^23.4.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
