@@ -34,6 +34,7 @@
     "kcd-scripts": "^0.39.2"
   },
   "scripts": {
+    "add-contributor": "kcd-scripts contributors add",
     "build": "kcd-scripts build",
     "test": "jest"
   },
