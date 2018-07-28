@@ -2,12 +2,12 @@
 
 exports[`macros 1. macros: 1. macros 1`] = `
 "
-import money from '../src/macro'
+import decimal from '../src/macro'
 
-const a = money(1)
-const b = money(a)
-const c = money(-1)
-const d = money(-c)
+const a = decimal(1)
+const b = decimal(a)
+const c = decimal(-1)
+const d = decimal(-c)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -23,14 +23,14 @@ const d = _Decimal(_Decimal(c).neg());
 
 exports[`macros 2. macros: 2. macros 1`] = `
 "
-import money from '../src/macro'
+import decimal from '../src/macro'
 
-const a = money(1)
-const c = money(b - 3)
-const d = money(c * 4)
-const e = money(d / 5)
-const f = money(e ** 10)
-const g = money(f % 2)
+const a = decimal(1)
+const c = decimal(b - 3)
+const d = decimal(c * 4)
+const e = decimal(d / 5)
+const f = decimal(e ** 10)
+const g = decimal(f % 2)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -48,12 +48,12 @@ const g = _Decimal(f).mod('2');
 
 exports[`macros 3. macros: 3. macros 1`] = `
 "
-import money from '../src/macro'
+import decimal from '../src/macro'
 
-const a = money(1)
-const b = money(a - 3 * 4 / 5)
-const c = money(a - 3 + 4 - 5)
-const d = money(1 ** 2 ** 3)
+const a = decimal(1)
+const b = decimal(a - 3 * 4 / 5)
+const c = decimal(a - 3 + 4 - 5)
+const d = decimal(1 ** 2 ** 3)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -69,10 +69,10 @@ const d = _Decimal('1').pow(_Decimal('2').pow('3'));
 
 exports[`macros 4. macros: 4. macros 1`] = `
 "
-import money from '../src/macro'
+import decimal from '../src/macro'
 
-const a = money((1 + 2) * (3 - 4))
-const b = money(((1 + 2)))
+const a = decimal((1 + 2) * (3 - 4))
+const b = decimal(((1 + 2)))
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
@@ -86,11 +86,11 @@ const b = _Decimal('1').add('2');
 
 exports[`macros 5. macros: 5. macros 1`] = `
 "
-import money from '../src/macro'
+import decimal from '../src/macro'
 import Decimal from 'Decimal'
 import _Decimal from '_Decimal'
 
-const a = money(1)
+const a = decimal(1)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 

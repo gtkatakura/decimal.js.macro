@@ -6,12 +6,12 @@
 ## Usage
 
 ```js
-import money from 'decimal.js.macro'
+import decimal from 'decimal.js.macro'
 
-const a = money(1)
-const b = money(a - 3 * 4 / 5)
-const c = money(a - 3 + 4 - 5)
-const d = money(1 ** 2 ** 3)
+const a = decimal(1)
+const b = decimal(a - 3 * 4 / 5)
+const c = decimal(a - 3 + 4 - 5)
+const d = decimal(1 ** 2 ** 3)
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
