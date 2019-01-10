@@ -26,7 +26,8 @@
     "npm": "> 3"
   },
   "dependencies": {
-    "babel-plugin-macros": "^2.3.0"
+    "babel-plugin-macros": "^2.3.0",
+    "create-numeric-js-macro": "^1.0.0"
   },
   "devDependencies": {
     "babel-plugin-tester": "^5.4.0",
