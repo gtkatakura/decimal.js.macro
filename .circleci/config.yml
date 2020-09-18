@@ -18,6 +18,9 @@ jobs:
           name: Test
           command: yarn test
       - run:
+          name: Build
+          command: yarn build
+      - run:
           name: release
           command: yarn run semantic-release || true
 
