@@ -20,7 +20,8 @@
     "url": "https://github.com/gtkatakura/decimal.js.macro/issues"
   },
   "homepage": "https://github.com/gtkatakura/decimal.js.macro#readme",
-  "main": "dist/index.js",
+  "main": "dist/macro.js",
+  "types": "index.d.ts",
   "engines": {
     "node": "> 4",
     "npm": "> 3"
@@ -43,5 +44,8 @@
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "optionalDependencies": {
+    "@types/decimal.js": "^7.4.0"
   }
 }

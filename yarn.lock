@@ -219,6 +219,13 @@
   dependencies:
     "@types/estree" "*"
 
+"@types/decimal.js@^7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@types/decimal.js/-/decimal.js-7.4.0.tgz#0289c1903c31a4e9b94caa741916a9bc64d1c585"
+  integrity sha512-TiP45voN8GdDib9QkkdMprTfs86xxHInqTxNPSGbF0m6X0LXVBjkFEKbbL9fqm4ZPoVFkG1p4F26on2MWGvW5w==
+  dependencies:
+    decimal.js "*"
+
 "@types/estree@*":
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
@@ -2436,6 +2443,11 @@ decamelize@^2.0.0:
   integrity sha512-Ikpp5scV3MSYxY39ymh45ZLEecsTdv/Xj2CaQfI8RLMuwi7XvjX9H/fhraiSuU+C5w5NTDu4ZU72xNiZnurBPg==
   dependencies:
     xregexp "4.0.0"
+
+decimal.js@*:
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.2.0.tgz#39466113a9e036111d02f82489b5fd6b0b5ed231"
+  integrity sha512-vDPw+rDgn3bZe1+F/pyEwb1oMG2XTlRVgAa6B4KccTEpYgF8w6eQllVbQcfIJnZyvzFtFpxnpGtx8dd7DJp/Rw==
 
 decode-uri-component@^0.2.0:
   version "0.2.0"

@@ -1,4 +1,4 @@
-import decimal from '../../src/macro'
+import decimal from 'decimal.js.macro'
 
 const a = decimal(1)
 const b = decimal(a - 3 * 4 / 5)

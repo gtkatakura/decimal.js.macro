@@ -9,6 +9,10 @@
     "babel-preset-env": "^1.7.0",
     "decimal.js": "^10.0.1"
   },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "decimal.js.macro": "file:.."
+  },
   "scripts": {
     "build": "babel src --out-dir dist",
     "start": "npm run build && node dist/index.js"
