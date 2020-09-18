@@ -34,7 +34,7 @@
     "babel-plugin-tester": "^5.4.0",
     "jest": "^23.4.2",
     "kcd-scripts": "^0.39.2",
-    "semantic-release": "^15.8.1"
+    "semantic-release": "^17.1.2"
   },
   "scripts": {
     "add-contributor": "kcd-scripts contributors add",
