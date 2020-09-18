@@ -1,8 +1,12 @@
-version: 2
+version: 2.1
+
+orbs:
+  node: circleci/node@4.0.0
+
 jobs:
-  build:
+  build-and-test:
     docker:
-      - image: 'circleci/node:latest'
+      - image: "cimg/base:stable"
     steps:
       - checkout
       - run:
@@ -14,3 +18,8 @@ jobs:
       - run:
           name: release
           command: npm run semantic-release || true
+
+workflows:
+  build-and-test:
+    jobs:
+      - build-and-test
